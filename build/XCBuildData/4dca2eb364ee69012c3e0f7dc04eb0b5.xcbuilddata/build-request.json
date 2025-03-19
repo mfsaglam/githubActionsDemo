@@ -1,0 +1,41 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "69854ec378b94463f3870f459d1801812ea19d1c0f07b3f251669c8b38ed4a72"
+    }
+  ],
+  "containerPath" : "/Users/fatihsaglam/Developer/GithubActionsDemo/GithubActionsDemo.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "archive",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "SDKROOT" : "iphoneos17.5"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "archive",
+          "COLOR_DIAGNOSTICS" : "YES",
+          "diagnostic_message_length" : "139",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
