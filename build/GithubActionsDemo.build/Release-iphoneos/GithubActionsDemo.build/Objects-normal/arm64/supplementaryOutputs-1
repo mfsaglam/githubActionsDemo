@@ -1,9 +1,0 @@
-"/Users/fatihsaglam/Developer/GithubActionsDemo/GithubActionsDemo/ContentView.swift":
-  swiftdoc: "/Users/fatihsaglam/Developer/GithubActionsDemo/build/GithubActionsDemo.build/Release-iphoneos/GithubActionsDemo.build/Objects-normal/arm64/GithubActionsDemo.swiftdoc"
-  swiftmodule: "/Users/fatihsaglam/Developer/GithubActionsDemo/build/GithubActionsDemo.build/Release-iphoneos/GithubActionsDemo.build/Objects-normal/arm64/GithubActionsDemo.swiftmodule"
-  const-values: "/Users/fatihsaglam/Developer/GithubActionsDemo/build/GithubActionsDemo.build/Release-iphoneos/GithubActionsDemo.build/Objects-normal/arm64/GithubActionsDemo-master.swiftconstvalues"
-  dependencies: "/Users/fatihsaglam/Developer/GithubActionsDemo/build/GithubActionsDemo.build/Release-iphoneos/GithubActionsDemo.build/Objects-normal/arm64/GithubActionsDemo-master.d"
-  abi-baseline-json: "/Users/fatihsaglam/Developer/GithubActionsDemo/build/GithubActionsDemo.build/Release-iphoneos/GithubActionsDemo.build/Objects-normal/arm64/GithubActionsDemo.abi.json"
-  swiftsourceinfo: "/Users/fatihsaglam/Developer/GithubActionsDemo/build/GithubActionsDemo.build/Release-iphoneos/GithubActionsDemo.build/Objects-normal/arm64/GithubActionsDemo.swiftsourceinfo"
-  diagnostics: "/Users/fatihsaglam/Developer/GithubActionsDemo/build/GithubActionsDemo.build/Release-iphoneos/GithubActionsDemo.build/Objects-normal/arm64/GithubActionsDemo-master.dia"
-  objc-header: "/Users/fatihsaglam/Developer/GithubActionsDemo/build/GithubActionsDemo.build/Release-iphoneos/GithubActionsDemo.build/Objects-normal/arm64/GithubActionsDemo-Swift.h"
