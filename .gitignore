@@ -43,5 +43,14 @@ xcuserdata/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+Build
+
+# fastlane
+Fastlane/report.xml
+Fastlane/test_output
+
+GithubActionsDemo.app.dSYM.zip
+GithubActionsDemo.ipa
+
 # End of https://www.toptal.com/developers/gitignore/api/osx,xcode
 build
