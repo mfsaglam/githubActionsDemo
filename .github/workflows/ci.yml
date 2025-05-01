@@ -1,0 +1,46 @@
+name: CI (Unit Tests)
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - 'feature/*'
+      - 'release/*'
+      - 'hotfix/*'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ secrets.KEY }}
+
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+
+      - name: Install Bundler
+        run: gem install bundler
+
+      - name: Install Gems
+        run: bundle install
+
+      - name: Launch Simulator
+        uses: futureware-tech/simulator-action@v3
+        with:
+          model: 'iPhone 15 Pro'
+          os: 'iOS'
+          os_version: '17.2'
+
+      - name: Run Tests
+        run: bundle exec fastlane tests
