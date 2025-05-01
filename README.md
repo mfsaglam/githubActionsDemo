@@ -383,3 +383,73 @@ jobs:
 ```
 
 If you have configured everything correctly, then when you push any changes to the main branch, the tests will be run, then the build will be assembled and sent to Test Flight.
+
+## ⚙️ Final branching strategy & CI/CD with GitHub Actions
+
+This project uses **GitHub Actions** for automated testing and deployment. Below are the two main workflow configurations located in the `.github/workflows/` directory:
+
+---
+
+### 🧪 `ci.yml` – Continuous Integration (Unit Testing)
+
+This workflow is triggered on:
+
+- Pushes to the following branches: `main`, `develop`, `feature/*`, `release/*`, `hotfix/*`
+- Any pull request
+- Manual trigger (`workflow_dispatch`)
+
+**Purpose:** Automatically runs unit tests to ensure code stability before merging or deployment.
+
+**Key Steps:**
+
+1. **Checkout Repository**  
+   Clones the repository.
+
+2. **Cancel Previous Runs**  
+   Uses `styfle/cancel-workflow-action` to avoid redundant builds on the same branch.
+
+3. **Set Up macOS with Xcode**  
+   Uses the latest stable version of Xcode.
+
+4. **Set Up Ruby Environment**  
+   Installs Ruby and required gems using Bundler.
+
+5. **Launch iOS Simulator**  
+   Runs tests on an iPhone 15 Pro simulator (iOS 17.2).
+
+6. **Run Tests with Fastlane**  
+   Executes unit tests via `bundle exec fastlane tests`.
+
+---
+
+### 🚀 `cd.yml` – Continuous Deployment (TestFlight)
+
+This workflow is triggered on:
+
+- Pushes to the `main` branch
+- Pushes to any `hotfix/*` branch
+- Manual trigger (`workflow_dispatch`)
+
+**Purpose:** Automatically deploys the app to **TestFlight** using Fastlane.
+
+**Key Steps:**
+
+1. **Checkout Repository**  
+   Clones the repository.
+
+2. **Cancel Previous Runs**  
+   Avoids overlapping deploys.
+
+3. **Set Up macOS with Xcode**  
+   Uses the latest stable version of Xcode.
+
+4. **Set Up Ruby Environment**  
+   Installs Ruby and dependencies using Bundler.
+
+5. **Deploy with Fastlane**  
+   Executes `bundle exec fastlane test_flight` to upload the build to TestFlight.
+
+---
+
+These workflows ensure a smooth and automated process for code testing and deployment. Customize the Fastlane lanes and triggers to match your team's workflow and branching strategy.
+
