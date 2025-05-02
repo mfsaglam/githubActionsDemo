@@ -23,9 +23,10 @@ platform :ios do
 
   desc 'Builds project and executes unit tests'
   lane :tests do
-    run_tests(workspace: "#{ENV['APP_XCODEPROJ']}/project.xcworkspace",
-              devices: ["iPhone 15 Pro"],
-              scheme: "#{ENV['APP_SCHEME']}")
+    run_tests(
+        project: "GithubActionsDemo.xcodeproj",
+        scheme: "GithubActionsDemo"
+    )
   end
 
   lane :test_flight do
