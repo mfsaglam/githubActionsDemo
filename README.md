@@ -1,3 +1,6 @@
+![CI](https://github.com/mfsaglam/githubActionsDemo/actions/workflows/ci.yml/badge.svg)
+![CD](https://github.com/mfsaglam/githubActionsDemo/actions/workflows/cd.yml/badge.svg)
+
 # CI/CD example for iOS 
 
 A simple example of CI/CD for iOS. The example is basic and is made only to show how you can automate the **launch of unit tests** and sending build to **Test Flight** every time you **commit** to the **main** branch. 
