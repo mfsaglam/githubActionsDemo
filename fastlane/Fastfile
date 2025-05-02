@@ -34,7 +34,9 @@ platform :ios do
     run_tests(
         project: "GithubActionsDemo.xcodeproj",
         scheme: "GithubActionsDemoUITests",
-        clean: true
+        clean: true,
+	force_quit_simulator: true,
+  	reset_simulator: true
     )
   end
 

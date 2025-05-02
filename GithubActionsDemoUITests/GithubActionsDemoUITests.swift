@@ -27,7 +27,7 @@ final class GithubActionsDemoUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        XCTAssertEqual(2*2, 4)
+        XCTAssertTrue(app.state == .runningForeground)
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 }

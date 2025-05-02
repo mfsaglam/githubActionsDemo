@@ -36,11 +36,12 @@ jobs:
         run: bundle install
 
       - name: Launch Simulator
-        uses: futureware-tech/simulator-action@v3
+        uses: futureware-tech/simulator-action@v4
         with:
-          model: 'iPhone 15 Pro'
-          os: 'iOS'
-          os_version: '17.2'
+            model: 'iPhone 16'
+            os: 'iOS'
+            os_version: '18.2'
+
 
       - name: Run Tests
         run: bundle exec fastlane tests
