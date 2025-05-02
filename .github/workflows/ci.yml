@@ -44,3 +44,6 @@ jobs:
 
       - name: Run Tests
         run: bundle exec fastlane tests
+
+      - name: Run UI Tests
+        run: bundle exec fastlane ui_tests
