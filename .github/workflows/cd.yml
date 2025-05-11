@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - develop
       - 'hotfix/*'
   workflow_dispatch:
 
@@ -30,5 +31,10 @@ jobs:
       - name: Install Gems
         run: bundle install
 
-      - name: Deploy to TestFlight
-        run: bundle exec fastlane test_flight
+      - name: Deploy to TestFlight (TEST)
+        if: github.ref == 'refs/heads/develop'
+        run: bundle exec fastlane test_flight_test
+
+      - name: Deploy to TestFlight (PROD)
+        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/hotfix/')
+        run: bundle exec fastlane test_flight_prod
