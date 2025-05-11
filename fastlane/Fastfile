@@ -36,8 +36,9 @@ platform :ios do
       key_filepath: "#{ENV['APP_AUTH_KEY_FILEPATH']}",
       duration: "#{ENV['APP_STORE_CONNECT_DURATION']}" 
     )
+
     previous_build_number = latest_testflight_build_number(
-      app_identifier:"#{ENV['APP_IDENTIFIER']}",
+      app_identifier: app_identifier,
       api_key: api_key,
     )
     
