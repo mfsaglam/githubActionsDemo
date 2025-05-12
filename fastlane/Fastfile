@@ -65,6 +65,7 @@ platform :ios do
     sync_code_signing(
       type: "appstore",
       readonly: true,
+      app_identifier: app_identifier
     )
 
     build_app(

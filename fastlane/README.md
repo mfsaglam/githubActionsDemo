@@ -23,10 +23,26 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Builds project and executes unit tests
 
-### ios test_flight
+### ios test_flight_prod
 
 ```sh
-[bundle exec] fastlane ios test_flight
+[bundle exec] fastlane ios test_flight_prod
+```
+
+Deploy to TestFlight - Production
+
+### ios test_flight_test
+
+```sh
+[bundle exec] fastlane ios test_flight_test
+```
+
+Deploy to TestFlight - Test Environment
+
+### ios deploy_to_testflight
+
+```sh
+[bundle exec] fastlane ios deploy_to_testflight
 ```
 
 
